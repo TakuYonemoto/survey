@@ -219,28 +219,28 @@ void check(Double_t *par)
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = -old1_CAD + v_Rot;
+   v_Res = v_Rot - old1_CAD;
    std::cout<<" old1_1.5_diff : "<< v_Res.X()<<", "<<v_Res.Y()<<", "<<v_Res.Z()<<std::endl;
    
    v_Rot = old2_FARO - v_Para;
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = -old2_CAD + v_Rot;
+   v_Res = v_Rot - old2_CAD;
    std::cout<<" old2_1.5_diff : "<< v_Res.X()<<", "<<v_Res.Y()<<", "<<v_Res.Z()<<std::endl;
 
    v_Rot = old3_FARO - v_Para;
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = -old3_CAD + v_Rot;
+   v_Res = v_Rot - old3_CAD;
    std::cout<<" old3_1.5_diff : "<< v_Res.X()<<", "<<v_Res.Y()<<", "<<v_Res.Z()<<std::endl;
 
    v_Rot = old4_FARO - v_Para;
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = -old4_CAD + v_Rot;
+   v_Res = v_Rot - old4_CAD;
    std::cout<<" old4_1.5_diff : "<< v_Res.X()<<", "<<v_Res.Y()<<", "<<v_Res.Z()<<std::endl;
 
    std::cout<<"***************************************************"<<std::endl;
@@ -248,25 +248,25 @@ void check(Double_t *par)
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = old1_CAD - v_Rot;
+   v_Res = v_Rot - old1_CAD;
    std::cout<<" old1_0.5_diff : "<< v_Res.X()<<", "<<v_Res.Y()<<", "<<v_Res.Z()<<std::endl;
    v_Rot = old2_FARO2 - v_Para;
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = old2_CAD - v_Rot;
+   v_Res = v_Rot - old2_CAD;
    std::cout<<" old2_0.5_diff : "<< v_Res.X()<<", "<<v_Res.Y()<<", "<<v_Res.Z()<<std::endl;
    v_Rot = old3_FARO2 - v_Para;
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = old3_CAD - v_Rot;
+   v_Res = v_Rot - old3_CAD;
    std::cout<<" old3_0.5_diff : "<< v_Res.X()<<", "<<v_Res.Y()<<", "<<v_Res.Z()<<std::endl;
    v_Rot = old4_FARO2 - v_Para;
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = old4_CAD - v_Rot;
+   v_Res = v_Rot - old4_CAD;
    std::cout<<" old4_0.5_diff : "<< v_Res.X()<<", "<<v_Res.Y()<<", "<<v_Res.Z()<<std::endl;
 }
 
