@@ -16,7 +16,7 @@ TVector3 v9_FARO = TVector3(457.4944, 351.0098, 152.2236);
 TVector3 v10_FARO = TVector3(391.2457, 362.3315, 148.6683);
 TVector3 v11_FARO = TVector3(139.8866, 290.4434, 148.947);
 
-TVector3 v7_COBRA = TVector3(-358.801, -75.263, -1147.147);
+TVector3 v3_COBRA = TVector3(-358.801, -75.263, -1147.147);
 TVector3 v9_COBRA = TVector3(158.605, -338.287, -1294.136);
 TVector3 v10_COBRA = TVector3(95.281, -361.259, -1291.291);
 TVector3 v11_COBRA = TVector3(-164.731, -335.467, -1294.349);
@@ -99,6 +99,7 @@ void FARO_COBRA_calib2019(){
 
    //Double_t redchi = fmin/(4*3 -6);
    std::cout << "LossFunc = " << fmin << std::endl;
+   std::cout << "redchi = " << fmin/(4*3-6) << std::endl;
    Double_t par_result[npar], par_err[npar];
    for(Int_t i=0; i<npar; i++){
       Double_t current, error;
@@ -130,7 +131,7 @@ void LossFunc(Int_t &npar, Double_t *gin, Double_t &f, Double_t *par, Int_t flag
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = v7_COBRA - v_Rot;
+   v_Res = v3_COBRA - v_Rot;
    L += v_Res.Mag2();
 
    v_Rot = v9_FARO - v_Para;
@@ -168,7 +169,7 @@ void check(Double_t *par)
    v_Rot.RotateX(par[3]*TMath::DegToRad());
    v_Rot.RotateY(par[4]*TMath::DegToRad());
    v_Rot.RotateZ(par[5]*TMath::DegToRad());
-   v_Res = v7_COBRA - v_Rot;
+   v_Res = v3_COBRA - v_Rot;
    std::cout << " 3 : " << v_Res.X() << ", " << v_Res.Y() << ", " << v_Res.Z() << std::endl;
    L += v_Res.Mag2();
 

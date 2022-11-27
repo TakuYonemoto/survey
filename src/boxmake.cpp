@@ -29,7 +29,7 @@ const Double_t D2R = DegToRad();
 const Double_t Pi = TMath::Pi();
 
 Double_t x,y,z,dx,dy,dz;
-TFile *f1 = new TFile("outputfiles/one.root");
+TFile *f1 = new TFile("outputfiles/one.root","read");
 TTree *t1 = (TTree*)f1->Get("tree1");
 Long64_t N = t1->GetEntries();
 
@@ -69,7 +69,7 @@ void boxmake()
    gr0->SetMarkerSize(0.4);
    gr0->SetNameTitle("hako","hako; x axis; y axis; z axis");
 
-   const Long64_t nr = 3000;
+   const Long64_t nr = 5000;
    Int_t nr1 = nr * (2*hy*2*hz)/S;
    Int_t nr2 = nr * S2/S;
    Int_t nr3 = nr * S3/S;
@@ -196,6 +196,7 @@ void boxmake()
    Int_t ii =0;
 
    TGraph2D *g2 = new TGraph2D();
+   g2->SetName("Box_graph");
 
    for(Int_t i=0; i<N; i++){
       g1->GetPoint(i,x,y,z);
