@@ -1,6 +1,9 @@
 
 # Here is macros for alignment of pixel-local-coordinates on the timing counter structure.
 
+Using the analysis library, ROOT (https://root.cern)
+(almost for conventional reasons, partially for mathematical tools (rotation, vector sum, ...) and tuples (TTree))
+
 ## Here we say:
 
 - CAD coordinates : designed values (x,y,z) for pixels and reference points where the COBRA center is set as (0,0,0).
