@@ -3,11 +3,11 @@
 
 ## Here we say:
 
-- CAD coordinate : designed values (x,y,z) for pixels and reference points where the COBRA center is set as (0,0,0).
-- FARO coordinate : measured points data for each pixel by FARO ScanArm.
-- COBRA 20XX coordinate : measured values (x,y,z) of reference points' center for 20XX installation into COBRA magnet structure.
+- CAD coordinates : designed values (x,y,z) for pixels and reference points where the COBRA center is set as (0,0,0).
+- FARO coordinates : measured points data for each pixel by FARO ScanArm.
+- COBRA 20XX coordinates : measured values (x,y,z) of reference points' center for 20XX installation into COBRA magnet structure.
 
-### 1. Align FARO data and designed values in COBRA.
+### 1. Align FARO data and CAD designed values.
 - make it easy to get the initial value of position and rotation angle of pixels.
 `src/FARO_CAD_calib.cpp`
 
