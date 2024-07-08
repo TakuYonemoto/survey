@@ -25,7 +25,7 @@ void Autokiridashi_FARO_CAD()
    
    Int_t id,idx,order,hitorder;
    string str;
-   ifstream ifs("data/Geometry.csv");
+   ifstream ifs("data/PixelPositions.csv");
    if(!ifs){
       cout << "Error: File cannot open!" << endl;
    }

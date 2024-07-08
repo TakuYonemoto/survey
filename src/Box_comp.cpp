@@ -22,7 +22,7 @@ void Box_comp()
    Double_t x,y,z,phi,theta,psi;
    TVector3 v;
    string str;
-   ifstream ifs("data/Geometry.csv");
+   ifstream ifs("data/PixelPositions.csv");
    if(!ifs){
       cout << "Error: File cannot open!" << endl;
    } 

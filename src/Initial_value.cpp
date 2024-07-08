@@ -24,7 +24,7 @@ void Initial_value()
    Double_t x,y,z,phi,theta,psi;
    TVector3 v;
    string str;
-   ifstream ifs("data/Geometry.csv");
+   ifstream ifs("data/PixelPositions.csv");
    if(!ifs){
       cout << "Error: File cannot open!" << endl;
    } 
@@ -369,7 +369,7 @@ void Initial_value()
 
    Int_t ex_flag = 0;
    Int_t ex_size = ex_id.size();
-   std::ofstream geometry2("outputfiles/Geometry2.csv");
+   std::ofstream geometry2("outputfiles/PixelPositions_fitted.csv");
    geometry2 << "id \t idx \t XYZPosition_0 \t XYZPosition_1 \t XYZPosition_2 \t XPhi \t XTheta \t XPsi \t Order \t GeometricalHitOrder" << std::endl;
    for(Int_t i=0; i<512; i++){
       if(i < 256){

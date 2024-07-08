@@ -22,9 +22,9 @@ void Ana_VS_COBRA()
    Double_t x,y,z,phi,theta,psi;
    TVector3 v;
    string str;
-   ifstream ifs("data/Geometry.csv");
+   ifstream ifs("data/PixelPositions.csv");
    if(!ifs){
-      cout << "Error: Geometry.csv cannot open! Are you now at master directory?" << endl;
+      cout << "Error: PixelPositions.csv cannot open! The directory reference is correct?" << endl;
    } 
    while(getline(ifs,str)){
       sscanf(str.data(), "%d,%d,%lf,%lf,%lf,%lf,%lf,%lf,%d,%d",&id,&idx,&x,&y,&z,&phi,&theta,&psi,&order,&hitorder);
